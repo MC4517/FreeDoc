@@ -6,12 +6,13 @@ Appointment.destroy_all
 Specialty.destroy_all
 City.destroy_all
 
+
 5.times do
     city = City.create!(
         name: Faker::Address.city,
         zip_code: Faker::Address.zip
     )
-
+end
 10.times do
     doctor = Doctor.create!(
         first_name: Faker::Name.first_name,
@@ -27,7 +28,7 @@ City.destroy_all
     )
 end
 
-end
+
 30.times do
     appointment = Appointment.create!(
         doctor_id: Faker::Number.within(range: 1..10),
@@ -37,10 +38,13 @@ end
 )
 end
 
+i = 1
+
 20.times do
     
     doctor_join_speciality = JoinDoctorSpecialty.create!(
-        doctor_id: Faker::Number.between(from: 1, to: 20) , specialty_id: Faker::Number.within(range: 1..5))
+        doctor_id: i, specialty_id: Faker::Number.within(range: 1..5))
+        i += 1
          
 end
 
