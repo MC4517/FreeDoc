@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Programme FreeDoc avec BDD de docteurs avec spécialités, rendez vouz
+Pour tester : n'oubliez pas le bundle instal.
